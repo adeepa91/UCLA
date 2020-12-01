@@ -26,4 +26,9 @@ public class GradeController {
     public List<Grade> getGradesForStudent(@PathVariable("studentNumber") long studentNumber){
         return gradeService.getGradesForStudentNumber(studentNumber);
     }
+
+    @GetMapping(value = "/student-sub/{subject}")
+    public List<Grade> getGradesForSubject(@PathVariable("subject") String subject){
+        return gradeService.getGradesForSubject(subject);
+    }
 }

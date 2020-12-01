@@ -8,4 +8,6 @@ import java.util.List;
 public interface GradeRepository extends MongoRepository<Grade,String> {
 
     List<Grade> findByStudentNumber(long studentNumber);
+
+    List<Grade> findBySubject(String subject);
 }

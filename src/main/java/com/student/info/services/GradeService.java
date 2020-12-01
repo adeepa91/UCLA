@@ -9,4 +9,7 @@ public interface GradeService {
     void saveOrUpdateGrade(Grade grade);
 
     List<Grade> getGradesForStudentNumber(long studentNumber);
+
+    List<Grade> getGradesForSubject(String subject);
+
 }

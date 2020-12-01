@@ -22,4 +22,9 @@ public class GradeServiceImpl implements GradeService{
     public List<Grade> getGradesForStudentNumber(long studentNumber) {
         return gradeRepo.findByStudentNumber(studentNumber);
     }
+
+    @Override
+    public List<Grade> getGradesForSubject(String subject) {
+        return gradeRepo.findBySubject(subject);
+    }
 }
