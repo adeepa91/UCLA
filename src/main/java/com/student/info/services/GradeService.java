@@ -12,4 +12,6 @@ public interface GradeService {
 
     List<Grade> getGradesForSubject(String subject);
 
+    List<Grade> getGradesForSubjectAndYear(String subject, int year);
+
 }

@@ -31,4 +31,9 @@ public class GradeController {
     public List<Grade> getGradesForSubject(@PathVariable("subject") String subject){
         return gradeService.getGradesForSubject(subject);
     }
+
+    @GetMapping(value = "/student-sub-yr")
+    public List<Grade> getGradesForSubjectAndYear(@RequestParam String subject, @RequestParam int year){
+        return gradeService.getGradesForSubjectAndYear(subject, year);
+    }
 }
