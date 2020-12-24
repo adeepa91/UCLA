@@ -26,4 +26,9 @@ public class StudentController {
         studentService.saveOrUpdateStudent(student);
         return new ResponseEntity<>("Successfully Save!!", HttpStatus.OK);
     }
+
+    @GetMapping(value = "/studentNumber/{studentNumber}")
+    public Student getStudentByStudentNumber(@PathVariable("studentNumber") Long studentNumber){
+        return studentService.getStudentByStudentNumber(studentNumber);
+    }
 }

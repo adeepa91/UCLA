@@ -9,4 +9,6 @@ public interface StudentService {
     List<Student> findAll();
 
     void saveOrUpdateStudent(Student student);
+
+    Student getStudentByStudentNumber(Long studentNumber);
 }

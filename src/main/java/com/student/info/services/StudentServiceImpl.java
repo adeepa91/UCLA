@@ -22,4 +22,9 @@ public class StudentServiceImpl implements StudentService{
     public void saveOrUpdateStudent(Student student) {
         studentRepo.save(student);
     }
+
+    @Override
+    public Student getStudentByStudentNumber(Long studentNumber) {
+        return studentRepo.findByStudentNumber(studentNumber);
+    }
 }
