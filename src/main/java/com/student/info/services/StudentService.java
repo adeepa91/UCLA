@@ -11,4 +11,6 @@ public interface StudentService {
     void saveOrUpdateStudent(Student student);
 
     Student getStudentByStudentNumber(Long studentNumber);
+
+    Student getStudentByEmail(String email);
 }

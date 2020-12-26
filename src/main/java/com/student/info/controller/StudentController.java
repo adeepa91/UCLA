@@ -31,4 +31,10 @@ public class StudentController {
     public Student getStudentByStudentNumber(@PathVariable("studentNumber") Long studentNumber){
         return studentService.getStudentByStudentNumber(studentNumber);
     }
+
+    @GetMapping(value = "/email/{email}")
+    public Student getStudentByEmail(@PathVariable("email") String email){
+        return studentService.getStudentByEmail(email);
+    }
+
 }

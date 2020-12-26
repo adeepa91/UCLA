@@ -27,4 +27,9 @@ public class StudentServiceImpl implements StudentService{
     public Student getStudentByStudentNumber(Long studentNumber) {
         return studentRepo.findByStudentNumber(studentNumber);
     }
+
+    @Override
+    public Student getStudentByEmail(String email) {
+        return studentRepo.findByEmail(email);
+    }
 }
