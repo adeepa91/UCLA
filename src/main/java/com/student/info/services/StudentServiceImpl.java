@@ -32,4 +32,9 @@ public class StudentServiceImpl implements StudentService{
     public Student getStudentByEmail(String email) {
         return studentRepo.findByEmail(email);
     }
+
+    @Override
+    public void deleteStudent(String id) {
+        studentRepo.deleteById(id);
+    }
 }

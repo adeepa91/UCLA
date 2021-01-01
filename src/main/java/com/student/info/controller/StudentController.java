@@ -37,4 +37,9 @@ public class StudentController {
         return studentService.getStudentByEmail(email);
     }
 
+    @DeleteMapping(value = "/delete/{studentNumber}")
+    public void deleteStudent(@PathVariable("studentNumber") Long studentNumber){
+        studentService.deleteStudent(studentService.getStudentByStudentNumber(studentNumber).getId());
+    }
+
 }

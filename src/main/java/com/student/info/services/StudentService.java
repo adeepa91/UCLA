@@ -13,4 +13,6 @@ public interface StudentService {
     Student getStudentByStudentNumber(Long studentNumber);
 
     Student getStudentByEmail(String email);
+
+    void deleteStudent(String id);
 }
