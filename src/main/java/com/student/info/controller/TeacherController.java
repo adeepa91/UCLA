@@ -3,9 +3,7 @@ package com.student.info.controller;
 import com.student.info.model.Teacher;
 import com.student.info.services.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,6 +17,11 @@ public class TeacherController {
     @GetMapping(value = "/all")
     public List<Teacher> getAllTeachers(){
         return teacherService.findAll();
+    }
+
+    @PostMapping(value = "/save")
+    public void saveOrUpdateTeacher(@RequestBody Teacher teacher){
+        teacherService.saveOrUpdateTeacher(teacher);
     }
 
 }
